@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+
+	float longitud,sube,baja; 
+	float recorrido=0, dias=0;; 
+	
+	scanf("%f %f %f",&longitud,&sube,&baja);
+	
+	do{ 
+		recorrido=recorrido+sube-baja; 
+		dias++; 
+		if(recorrido>longitud){
+			dias=dias-1;
+		} 
+	}while(longitud>=recorrido); 
+	printf("%.2f",dias);
+	return 0;
+}
